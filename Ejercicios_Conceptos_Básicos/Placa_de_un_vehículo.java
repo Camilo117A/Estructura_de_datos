@@ -1,22 +1,18 @@
-package Ejercicios_basicos;
-
-public class RegistroVehiculo {
+public class Ficha_de_un_estudiante {
     public static void main(String[] args) {
-        // Información del vehículo
-        String placa = "KLR-456";
-        int anioFabricacion = 2022;
-        int cilindrajeCC = 1600;
-        double precioCompra = 45000000.0;
-        char inicialColor = 'R'; // R representa Rojo
-        boolean tieneSoatVigente = true;
+        // Declaración de variables con tipos adecuados
+        String nombre = "Ana Torres";
+        int codigo_E = 20241001;
+        int semestre = 3;
+        double promedio = 3.85;
+        boolean Matriculado = true;
 
-        // Mostrar información organizada
-        System.out.println("=== Registro Vehicular RUNT ===");
-        System.out.println("Placa: " + placa);
-        System.out.println("Año: " + anioFabricacion);
-        System.out.println("Cilindraje: " + cilindrajeCC + " cc");
-        System.out.println("Precio de mercado: $" + precioCompra);
-        System.out.println("Inicial Color: " + inicialColor);
-        System.out.println("SOAT al día: " + tieneSoatVigente);
+        // Impresión del reporte con formato limpio
+        System.out.println("=== Ficha del Estudiante ===");
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Código: " + codigo_E);
+        System.out.println("Semestre: " + semestre);
+        System.out.println("Promedio: " + promedio);
+        System.out.println("Matriculado: " + Matriculado);
     }
 }
