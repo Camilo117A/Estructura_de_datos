@@ -5,7 +5,7 @@ public class Placa_de_un_vehículo {
         int año_Fabricacion = 2022;
         int cilindraje_CC = 1600;
         double precioCompra = 45000000.0;
-        char inicialColor = 'R'; // R representa Rojo
+        char inicialColor = 'R';
         boolean tieneSoatVigente = true;
 
         // Mostrar información organizada
