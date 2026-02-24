@@ -1,3 +1,11 @@
+//Ejercicio 5 — Conversor de unidades
+//Una aplicación de cocina necesita convertir unidades:
+
+//Declara una variable tazas (double) con la cantidad de tazas de un ingrediente.
+//Convierte a mililitros (1 taza = 236.588 ml) y guarda el resultado en otra variable.
+//Convierte también a litros.
+//Muestra las tres medidas por consola.
+
 public class Conversor_de_unidades {
     public static void main(String[] args) {
         // Variable inicial
