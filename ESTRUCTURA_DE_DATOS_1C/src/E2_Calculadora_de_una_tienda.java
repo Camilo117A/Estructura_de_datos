@@ -7,7 +7,7 @@
 //Total a pagar después del descuento
 //Declara las variables, realiza el cálculo y muestra el resultado por consola.
 
-public class Calculadora_de_una_tienda {
+public class E1_Calculadora_de_una_tienda {
     public static void main(String[] args) {
         // Datos de entrada
         double precio_U = 1500.0;

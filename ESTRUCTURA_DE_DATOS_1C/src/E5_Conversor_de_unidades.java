@@ -6,7 +6,7 @@
 //Convierte también a litros.
 //Muestra las tres medidas por consola.
 
-public class Conversor_de_unidades {
+public class E2_Conversor_de_unidades {
     public static void main(String[] args) {
         // Variable inicial
         double cantidadTazas = 2.5;
