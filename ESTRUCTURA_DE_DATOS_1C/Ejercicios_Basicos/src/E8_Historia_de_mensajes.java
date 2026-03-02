@@ -8,7 +8,7 @@
 
 
 
-public class Historia_de_mensajes {
+public class E8_Historia_de_mensajes {
     public static void main(String[] args) {
 
         String ultimo_Mensaje = "Hola";

@@ -5,7 +5,7 @@
 //Muestra que el arreglo del profesor también refleja el cambio.
 //Añade comentarios explicando el concepto de referencia en memoria.
 
-public class Notas_de_un_curso {
+public class E9_Notas_de_un_curso {
     public static void main(String[] args) {
 
         double[] notas_Profesor = {4.5, 2.5, 3.8, 4.0};

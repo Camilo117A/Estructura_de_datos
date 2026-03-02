@@ -4,7 +4,7 @@
 //Demuestra con código que cambiar turnoEnPantalla no afecta a turnoActual (comportamiento por valor).
 //Explica en un comentario por qué ocurre esto.
 
-public class Turno_en_un_banco {
+public class E6_Turno_en_un_banco {
     public static void main(String[] args) {
 
         int turno_Actual = 15;

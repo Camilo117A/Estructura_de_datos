@@ -9,9 +9,9 @@
 //Si tiene SOAT vigente (boolean)
 //Muestra todos los datos en consola.
 
-public class Placa_de_un_vehículo {
+public class E4_Placa_de_un_vehículo {
     public static void main(String[] args) {
-        // Información del vehículo
+
         String placa = "KLR-456";
         int año_Fabricacion = 2022;
         int cilindraje_CC = 1600;
@@ -19,7 +19,6 @@ public class Placa_de_un_vehículo {
         char inicialColor = 'R';
         boolean tieneSoatVigente = true;
 
-        // Mostrar información organizada
         System.out.println("=== Registro Vehicular RUNT ===");
         System.out.println("Placa: " + placa);
         System.out.println("Año: " + año_Fabricacion);

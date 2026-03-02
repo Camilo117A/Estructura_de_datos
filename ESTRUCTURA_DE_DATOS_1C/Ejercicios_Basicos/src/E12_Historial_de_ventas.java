@@ -1,3 +1,9 @@
+//Ejercicio 12 — Historial de ventas (lineal)
+//Una tienda online guarda las ventas del día en un arreglo de double:
+
+//Almacena 7 ventas de ejemplo.
+//Calcula e imprime: la venta más alta, la venta más baja y el total del día.
+
 public class E12_Historial_de_ventas {
     public static void main(String[] args) {
 

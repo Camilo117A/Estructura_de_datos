@@ -6,7 +6,7 @@
 //Simula una venta reduciendo el stock de un producto desde stockReportes.
 //Muestra que stockAlmacen también cambió y explica en comentarios por qué.
 
-public class Inventari_compartido {
+public class E7_Inventari_compartido {
     public static void main(String[] args) {
 
         int[] stock_Almacen = {100, 50, 75, 30, 60};

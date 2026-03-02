@@ -12,9 +12,8 @@
 //Matriculado: true
 
 
-public class Ficha_de_un_estudiante {
+public class E1_Ficha_de_un_estudiante {
     public static void main(String[] args) {
-        // Declaración de variables con tipos adecuados
         String nombre = "Ana Torres";
         int codigo_E = 20241001;
         int semestre = 3;
