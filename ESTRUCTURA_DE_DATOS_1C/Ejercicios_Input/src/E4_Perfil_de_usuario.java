@@ -35,11 +35,11 @@ public class E4_Perfil_de_usuario {
         boolean aceptaTC = sc.nextBoolean(); 
 
         System.out.println("\n========= Perfil creado =========");
-        System.out.printf("Nombre  (String)  : ",  nombre);
-        System.out.printf("Edad    (int)     : ",  edad);
-        System.out.printf("Ciudad  (String)  : ",  ciudad);
-        System.out.printf("Correo  (String)  : ",  correo);
-        System.out.printf("T&C     (boolean) : ",  aceptaTC);
+        System.out.printf("Nombre  (String)  : %s%n",  nombre);
+        System.out.printf("Edad    (int)     : %d%n",  edad);
+        System.out.printf("Ciudad  (String)  : %s%n",  ciudad);
+        System.out.printf("Correo  (String)  : %s%n",  correo);
+        System.out.printf("T&C     (boolean) : %b%n",  aceptaTC);
 
         sc.close();
     }
