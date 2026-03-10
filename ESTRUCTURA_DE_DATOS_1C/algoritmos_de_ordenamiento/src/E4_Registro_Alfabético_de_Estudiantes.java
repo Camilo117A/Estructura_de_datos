@@ -38,22 +38,22 @@ public class E4_Registro_Alfabético_de_Estudiantes {
         }
 
         for (int i = 1; i < n; i++) {
-            String clave = nombres[i]; 
+            String clave = nombres[i];
             int j = i - 1;
 
             while (j >= 0 && nombres[j].compareToIgnoreCase(clave) > 0) {
-                nombres[j + 1] = nombres[j]; 
+                nombres[j + 1] = nombres[j];
                 j--;
             }
 
-            nombres[j + 1] = clave; 
+            nombres[j + 1] = clave;
         }
 
         System.out.println("\n--- Lista de asistencia (orden alfabético) ---");
         for (int i = 0; i < n; i++) {
             System.out.println("  " + (i + 1) + ". " + nombres[i]);
         }
-        
+
         scanner.close();
     }
 }

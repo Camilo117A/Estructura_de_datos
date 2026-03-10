@@ -44,7 +44,7 @@ public class E3_Salto_de_Shell {
         int fase = 1;
 
         while (gap > 0) {
-            System.out.printf("%nFase %d (gap = %d):%n", fase, gap);
+            System.out.println("\nFase " + fase + " (gap = " + gap + "):");
 
             for (int i = gap; i < n; i++) {
                 double temp = pesos[i];
@@ -62,17 +62,17 @@ public class E3_Salto_de_Shell {
             imprimirArreglo(pesos);
             System.out.println();
 
-            gap /= 2; 
+            gap /= 2;
             fase++;
         }
 
-        System.out.print("\nArreglo original:  ");
+        System.out.print("\nArreglo original: ");
         imprimirArreglo(original);
         System.out.println();
 
-        System.out.print("Arreglo ordenado:  ");
+        System.out.print("Arreglo ordenado: ");
         imprimirArreglo(pesos);
-        System.out.println("\n Paquetes ordenados de menor a mayor peso.");
+        System.out.println("\nPaquetes ordenados de menor a mayor peso.");
 
         scanner.close();
     }
@@ -80,7 +80,7 @@ public class E3_Salto_de_Shell {
     static void imprimirArreglo(double[] arr) {
         System.out.print("[");
         for (int i = 0; i < arr.length; i++) {
-            System.out.printf("%.1f", arr[i]);
+            System.out.print(arr[i]);
             if (i < arr.length - 1) System.out.print(", ");
         }
         System.out.print("]");

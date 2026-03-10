@@ -15,7 +15,6 @@ import java.util.Scanner;
 public class E5_Inspector_de_Eficiencia {
 
     static int contadorSwaps = 0;
-
     static int contadorMovimientos = 0;
 
     static int[] selectionSort(int[] arr) {
@@ -35,7 +34,7 @@ public class E5_Inspector_de_Eficiencia {
                 int temp = arr[i];
                 arr[i] = arr[indiceMenor];
                 arr[indiceMenor] = temp;
-                contadorSwaps++; 
+                contadorSwaps++;
             }
         }
 
@@ -51,8 +50,8 @@ public class E5_Inspector_de_Eficiencia {
             int j = i - 1;
 
             while (j >= 0 && arr[j] > clave) {
-                arr[j + 1] = arr[j]; 
-                contadorMovimientos++; 
+                arr[j + 1] = arr[j];
+                contadorMovimientos++;
                 j--;
             }
 
@@ -73,7 +72,7 @@ public class E5_Inspector_de_Eficiencia {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        final int TOTAL = 6;
+        int TOTAL = 6;
 
         int[] original = new int[TOTAL];
 
@@ -108,22 +107,17 @@ public class E5_Inspector_de_Eficiencia {
         System.out.println("Movimientos realizados: " + movimientos);
 
         System.out.println("\n=== RESUMEN DE EFICIENCIA ===");
-        System.out.printf("  Selection Sort → %d swaps%n", swaps);
-        System.out.printf("  Insertion Sort → %d movimientos%n", movimientos);
+        System.out.println("  Selection Sort -> " + swaps + " swaps");
+        System.out.println("  Insertion Sort -> " + movimientos + " movimientos");
 
-        System.out.println("\n Conclusión:");
+        System.out.println("\nConclusión:");
         if (swaps < movimientos) {
             System.out.println("  Selection Sort fue más eficiente para estos datos.");
-            System.out.println("  (Realizó menos operaciones de reubicación)");
         } else if (movimientos < swaps) {
             System.out.println("  Insertion Sort fue más eficiente para estos datos.");
-            System.out.println("  (Realizó menos movimientos para ordenar)");
         } else {
             System.out.println("  Ambos algoritmos tuvieron la misma cantidad de operaciones.");
         }
-
-        System.out.println("\n  Nota: Selection Sort siempre hace N-1 swaps como máximo.");
-        System.out.println("  Insertion Sort puede ser 0 movimientos si ya está ordenado.");
 
         scanner.close();
     }

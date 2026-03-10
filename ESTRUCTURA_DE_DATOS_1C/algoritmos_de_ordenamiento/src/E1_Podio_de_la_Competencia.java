@@ -31,7 +31,7 @@ public class E1_Podio_de_la_Competencia {
 
         System.out.println("\n--- Tiempos ingresados ---");
         for (int i = 0; i < n; i++) {
-            System.out.printf("Corredor %d: %.2f s%n", (i + 1), tiempos[i]);
+            System.out.println("Corredor " + (i + 1) + ": " + tiempos[i] + " s");
         }
 
         for (int i = 0; i < n - 1; i++) {
@@ -46,18 +46,17 @@ public class E1_Podio_de_la_Competencia {
             double tempTiempo = tiempos[i];
             tiempos[i] = tiempos[indiceMenor];
             tiempos[indiceMenor] = tempTiempo;
-
         }
 
         System.out.println("\n--- Resultados finales ordenados ---");
         for (int i = 0; i < n; i++) {
-            System.out.println((i + 1) + ". Corredor " + (i + 1) + " - " + tiempos[i]);
+            System.out.println((i + 1) + ". " + tiempos[i] + " s");
         }
 
-        System.out.println("\n🏆 === PODIO OFICIAL ===");
-        System.out.printf("🥇 ORO   → Corredor %d (%.2f s)%n", 1, tiempos[0]);
-        System.out.printf("🥈 PLATA → Corredor %d (%.2f s)%n", 2    , tiempos[1]);
-        System.out.printf("🥉 BRONCE→ Corredor %d (%.2f s)%n", 3, tiempos[2]);
+        System.out.println("\n=== PODIO OFICIAL ===");
+        System.out.println("ORO    -> 1er lugar: " + tiempos[0] + " s");
+        System.out.println("PLATA  -> 2do lugar: " + tiempos[1] + " s");
+        System.out.println("BRONCE -> 3er lugar: " + tiempos[2] + " s");
 
         scanner.close();
     }
