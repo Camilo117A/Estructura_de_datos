@@ -38,15 +38,6 @@ public class E2_Organización_de_Biblioteca_Dinámica {
         for (int i = 0; i < n; i++) {
             System.out.print("  ISBN libro " + (i + 1) + ": ");
             isbn[i] = scanner.nextInt();
-        }
-
-        System.out.print("\nArreglo original: ");
-        imprimirArreglo(isbn);
-        System.out.println();
-
-        System.out.println("\n--- Proceso de Insertion Sort paso a paso ---");
-
-        for (int i = 1; i < n; i++) {
             int clave = isbn[i];
             int j = i - 1;
 
@@ -54,18 +45,24 @@ public class E2_Organización_de_Biblioteca_Dinámica {
             System.out.print("  Antes:   ");
             imprimirArreglo(isbn);
             System.out.println();
-
+    
             while (j >= 0 && isbn[j] > clave) {
                 isbn[j + 1] = isbn[j];
                 j--;
             }
-
+    
             isbn[j + 1] = clave;
-
+    
             System.out.print("  Despues: ");
             imprimirArreglo(isbn);
             System.out.println();
         }
+
+        System.out.print("\nArreglo original: ");
+        imprimirArreglo(isbn);
+        System.out.println();
+
+        System.out.println("\n--- Proceso de Insertion Sort paso a paso ---");
 
         System.out.print("\nArreglo final ordenado: ");
         imprimirArreglo(isbn);
