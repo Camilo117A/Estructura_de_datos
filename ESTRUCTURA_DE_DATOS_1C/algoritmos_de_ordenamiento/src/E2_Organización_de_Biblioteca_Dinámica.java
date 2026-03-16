@@ -50,7 +50,7 @@ public class E2_Organización_de_Biblioteca_Dinámica {
                 isbn[j + 1] = isbn[j];
                 j--;
             }
-    
+
             isbn[j + 1] = clave;
     
             System.out.print("  Despues: ");
