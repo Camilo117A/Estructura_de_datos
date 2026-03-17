@@ -64,11 +64,13 @@ public class practica_1 {
                 int opcion = scanner.nextInt();
                 switch (opcion) {
                     case 1:
+                        ordenarProductosPorID(productos);
                         mostrarProductos(productos);
                         break;
                     case 2:
                         System.out.print("Ingresa el ID del producto a buscar: ");
                         String id = scanner.next();
+                        ordenarProductosPorID(productos);
                         buscarProductoPorID(productos, id);
                         break;
                     case 3:
