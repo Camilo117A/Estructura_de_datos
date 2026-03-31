@@ -21,7 +21,7 @@ public class Cola_Vuelos {
         if (Cabeza == null) return;
 
         if (Cabeza.Numero_vuelo.equals(Numero_vuelo)) {
-            System.out.println("Vuelo " + Numero_vuelo + " ya está de primero en la cola.");
+            System.out.println("Vuelo " + Numero_vuelo + " ya esta de primero en la cola.");
             return;
         }
 
@@ -54,16 +54,4 @@ public class Cola_Vuelos {
         }
         System.out.println(" -> null");
     }
-
-    public static void main(String[] args) {
-        Cola_Vuelos Torre = new Cola_Vuelos();
-        Torre.agregarVuelo(new Vuelos("AV101", "Avianca", 45, 180));
-        Torre.agregarVuelo(new Vuelos("LA205", "LATAM", 8, 200));
-        Torre.agregarVuelo(new Vuelos("VV310", "Viva Air", 60, 150));
-        System.out.println("\nCola antes de la emergencia:");
-        Torre.mostrarCola();
-        Torre.reportarEmergencia("LA205");
-        System.out.println("\nCola después de la emergencia:");
-        Torre.mostrarCola();
-    }
-}
+} 
