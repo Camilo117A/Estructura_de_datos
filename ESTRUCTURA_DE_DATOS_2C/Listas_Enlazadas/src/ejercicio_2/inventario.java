@@ -5,12 +5,11 @@ public class inventario {
         this.Cabeza = null;
     }
 
-    public void agregarProducto(String Nombre, int Cantidad, int Dias_para_vencer) {
-        producto Nuevo_producto = new producto(Nombre, Cantidad, Dias_para_vencer);
-        if (Dias_para_vencer < 3) {
+    public void agregarProducto(producto Nuevo_producto) {
+        if (Nuevo_producto.Dias_para_vencer < 3) {
             Nuevo_producto.Siguiente = Cabeza;
             Cabeza = Nuevo_producto;
-            System.out.println("⚠️  " + Nombre + " vence pronto, puesto al inicio.");
+            System.out.println(Nuevo_producto.Nombre + " vence pronto, puesto al inicio.");
         } else {
             if (Cabeza == null) {
                 Cabeza = Nuevo_producto;
@@ -47,10 +46,10 @@ public class inventario {
 
     public static void main(String[] args) {
         inventario Estante = new inventario();
-        Estante.agregarProducto("Leche Entera", 10, 7);
-        Estante.agregarProducto("Yogur Fresa", 5, 2);
-        Estante.agregarProducto("Queso Campesino", 8, 4);
-        Estante.agregarProducto("Mantequilla", 3, 1);
+        Estante.agregarProducto(new producto("Leche Entera", 10, 7));
+        Estante.agregarProducto(new producto("Yogur Fresa", 5, 2));
+        Estante.agregarProducto(new producto("Queso Campesino", 8, 4));
+        Estante.agregarProducto(new producto("Mantequilla", 3, 1));
         Estante.mostrarEstante();
         Estante.mostrarProximos_a_vencer();
     }
