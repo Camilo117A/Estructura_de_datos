@@ -7,22 +7,21 @@ public class Cola_Vuelos {
         this.Cola = null;
     }
 
-    public void agregarVuelo(String Numero_vuelo, String Aerolinea, int Combustible_restante, int Pasajeros) {
-        Vuelos Nuevo_vuelo = new Vuelos(Numero_vuelo, Aerolinea, Combustible_restante, Pasajeros);
+    public void agregarVuelo(Vuelos Nuevo_vuelo) {
         if (Cabeza == null) {
             Cabeza = Cola = Nuevo_vuelo;
         } else {
             Cola.Siguiente = Nuevo_vuelo;
             Cola = Nuevo_vuelo;
         }
-        System.out.println("Vuelo " + Numero_vuelo + " agregado a la cola.");
+        System.out.println("Vuelo " + Nuevo_vuelo.Numero_vuelo + " agregado a la cola.");
     }
 
     public void reportarEmergencia(String Numero_vuelo) {
         if (Cabeza == null) return;
 
         if (Cabeza.Numero_vuelo.equals(Numero_vuelo)) {
-            System.out.println("🚨 Vuelo " + Numero_vuelo + " ya está de primero en la cola.");
+            System.out.println("Vuelo " + Numero_vuelo + " ya está de primero en la cola.");
             return;
         }
 
@@ -37,7 +36,7 @@ public class Cola_Vuelos {
                 }
                 Actual.Siguiente = Cabeza;
                 Cabeza = Actual;
-                System.out.println("🚨 EMERGENCIA: Vuelo " + Numero_vuelo + " movido al inicio de la cola.");
+                System.out.println("EMERGENCIA: Vuelo " + Numero_vuelo + " movido al inicio de la cola.");
                 return;
             }
             Anterior = Actual;
@@ -58,9 +57,9 @@ public class Cola_Vuelos {
 
     public static void main(String[] args) {
         Cola_Vuelos Torre = new Cola_Vuelos();
-        Torre.agregarVuelo("AV101", "Avianca", 45, 180);
-        Torre.agregarVuelo("LA205", "LATAM", 8, 200);
-        Torre.agregarVuelo("VV310", "Viva Air", 60, 150);
+        Torre.agregarVuelo(new Vuelos("AV101", "Avianca", 45, 180));
+        Torre.agregarVuelo(new Vuelos("LA205", "LATAM", 8, 200));
+        Torre.agregarVuelo(new Vuelos("VV310", "Viva Air", 60, 150));
         System.out.println("\nCola antes de la emergencia:");
         Torre.mostrarCola();
         Torre.reportarEmergencia("LA205");
