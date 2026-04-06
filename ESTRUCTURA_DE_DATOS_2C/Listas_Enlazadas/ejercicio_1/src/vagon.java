@@ -1,8 +1,7 @@
 public class vagon {
     String contenido;
-    double persoToneladas;
+    double pesoToneladas;
     String origen;
     String destino;
-    Vagon siguiente;
-    }
+    vagon siguiente;
 }

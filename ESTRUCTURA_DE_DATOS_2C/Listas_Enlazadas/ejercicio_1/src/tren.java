@@ -1,13 +1,13 @@
 public class tren {
-    Vagosn cabeza;
+    vagon cabeza;
     public tren(){
     this.cabeza = null;
     }
-    public void agregarVagon(Vagon nuevoVagon){
+    public void agregarVagon(vagon nuevoVagon){
         if(cabeza == null){
             cabeza = nuevoVagon;
         } else {
-            Vagon actual = cabeza;
+            vagon actual = cabeza;
             while(actual.siguiente != null){
                 actual = actual.siguiente;
             }
@@ -16,12 +16,11 @@ public class tren {
     }
     public double calcularPesoTotal(){
     double pesoTotal = 0;
-    Vagon actual = cabeza;
+    vagon actual = cabeza;
         while(actual != null){
             pesoTotal += actual.pesoToneladas;
             actual = actual.siguiente;
         }
         return pesoTotal;
-        }
-    } 
-}
+    }
+} 
