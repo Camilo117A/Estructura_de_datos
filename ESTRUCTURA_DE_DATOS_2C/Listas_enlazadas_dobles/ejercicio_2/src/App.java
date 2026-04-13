@@ -1,30 +1,56 @@
+import java.util.Scanner;
+
 public class App {
 
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
         Galeria galeria = new Galeria();
+        int opcion = 0;
 
-        galeria.agregar_foto("vacaciones1.jpg", 3.5, "1920x1080");
-        galeria.agregar_foto("cumpleanos.png", 5.2, "4K");
-        galeria.agregar_foto("paisaje.jpg", 2.8, "1280x720");
-        galeria.agregar_foto("retrato.png", 4.1, "3840x2160");
+        while (opcion != 6) {
 
-        System.out.println();
-        System.out.println("-- Foto actual al inicio --");
-        galeria.mostrar_foto_actual();
+            System.out.println("\n====== Galeria de Fotos ======");
+            System.out.println("1. Agregar foto");
+            System.out.println("2. Foto siguiente");
+            System.out.println("3. Foto anterior");
+            System.out.println("4. Ver foto actual");
+            System.out.println("5. Reproducir galeria completa");
+            System.out.println("6. Salir");
+            System.out.print("Elige una opcion: ");
+            opcion = scanner.nextInt();
+            scanner.nextLine();
 
-        System.out.println("\n-- Avanzando fotos --");
-        galeria.siguiente_foto();
-        galeria.siguiente_foto();
+            if (opcion == 1) {
+                System.out.print("Nombre del archivo (ej: foto.jpg): ");
+                String nombre_archivo = scanner.nextLine();
+                System.out.print("Tamano en MB: ");
+                double tamano_mb = scanner.nextDouble();
+                scanner.nextLine();
+                System.out.print("Resolucion (ej: 1920x1080): ");
+                String resolucion = scanner.nextLine();
+                galeria.agregar_foto(nombre_archivo, tamano_mb, resolucion);
 
-        System.out.println("\n-- Retrocediendo una foto --");
-        galeria.foto_anterior();
+            } else if (opcion == 2) {
+                galeria.siguiente_foto();
 
-        System.out.println("\n-- Intentando retroceder desde la primera --");
-        galeria.foto_anterior();
-        galeria.foto_anterior();
+            } else if (opcion == 3) {
+                galeria.foto_anterior();
 
-        System.out.println("\n-- Reproduccion completa de la galeria --");
-        galeria.reproducir_galeria();
+            } else if (opcion == 4) {
+                galeria.mostrar_foto_actual();
+
+            } else if (opcion == 5) {
+                galeria.reproducir_galeria();
+
+            } else if (opcion == 6) {
+                System.out.println("Cerrando galeria.");
+
+            } else {
+                System.out.println("Opcion no valida, intenta de nuevo.");
+            }
+        }
+
+        scanner.close();
     }
 }

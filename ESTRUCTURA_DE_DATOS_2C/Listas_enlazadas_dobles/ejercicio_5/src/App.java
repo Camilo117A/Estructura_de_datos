@@ -1,38 +1,56 @@
+import java.util.Scanner;
+
 public class App {
 
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
         Reproductor reproductor = new Reproductor();
+        int opcion = 0;
 
-        reproductor.agregar_cancion("Blinding Lights", "The Weeknd", 200);
-        reproductor.agregar_cancion("Shape of You",    "Ed Sheeran", 234);
-        reproductor.agregar_cancion("Levitating",      "Dua Lipa",   203);
-        reproductor.agregar_cancion("Stay",            "Kid Laroi",  141);
+        while (opcion != 5) {
 
-        System.out.println();
-        reproductor.mostrar_playlist();
+            System.out.println("\n====== Reproductor de Musica ======");
+            System.out.println("1. Agregar cancion");
+            System.out.println("2. Cancion siguiente");
+            System.out.println("3. Cancion anterior");
+            System.out.println("4. Ver cancion actual");
+            System.out.println("5. Salir");
+            System.out.println("6. Ver playlist completa");
+            System.out.print("Elige una opcion: ");
+            opcion = scanner.nextInt();
+            scanner.nextLine();
 
-        System.out.println("\n-- Avanzando canciones --");
-        reproductor.saltar_adelante();
-        reproductor.saltar_adelante();
+            if (opcion == 1) {
+                System.out.print("Titulo de la cancion: ");
+                String titulo = scanner.nextLine();
+                System.out.print("Artista: ");
+                String artista = scanner.nextLine();
+                System.out.print("Duracion en segundos: ");
+                int duracion = scanner.nextInt();
+                scanner.nextLine();
+                reproductor.agregar_cancion(titulo, artista, duracion);
 
-        System.out.println();
-        reproductor.mostrar_playlist();
+            } else if (opcion == 2) {
+                reproductor.saltar_adelante();
 
-        System.out.println("\n-- Retrocediendo una cancion --");
-        reproductor.saltar_atras();
+            } else if (opcion == 3) {
+                reproductor.saltar_atras();
 
-        System.out.println();
-        reproductor.mostrar_playlist();
+            } else if (opcion == 4) {
+                reproductor.mostrar_cancion_actual();
 
-        System.out.println("\n-- Intentando retroceder desde la primera cancion --");
-        reproductor.saltar_atras();
-        reproductor.saltar_atras();
+            } else if (opcion == 5) {
+                System.out.println("Cerrando el reproductor.");
 
-        System.out.println("\n-- Intentando avanzar desde la ultima cancion --");
-        reproductor.saltar_adelante();
-        reproductor.saltar_adelante();
-        reproductor.saltar_adelante();
-        reproductor.saltar_adelante();
+            } else if (opcion == 6) {
+                reproductor.mostrar_playlist();
+
+            } else {
+                System.out.println("Opcion no valida, intenta de nuevo.");
+            }
+        }
+
+        scanner.close();
     }
 }

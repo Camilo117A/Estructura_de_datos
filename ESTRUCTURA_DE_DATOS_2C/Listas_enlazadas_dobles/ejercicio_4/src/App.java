@@ -1,30 +1,48 @@
+import java.util.Scanner;
+
 public class App {
 
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
         Consultorio consultorio = new Consultorio();
+        int opcion = 0;
 
-        consultorio.agregar_paciente("Carlos Perez",  35, 2);
-        consultorio.agregar_paciente("Laura Gomez",   72, 3);
-        consultorio.agregar_paciente("Pedro Ramirez", 58, 1);
-        consultorio.agregar_paciente("Ana Torres",    45, 2);
+        while (opcion != 4) {
 
-        System.out.println();
-        consultorio.mostrar_fila();
+            System.out.println("\n====== Consultorio Medico ======");
+            System.out.println("1. Agregar paciente");
+            System.out.println("2. Ver fila de pacientes");
+            System.out.println("3. Buscar paciente de mayor edad");
+            System.out.println("4. Salir");
+            System.out.print("Elige una opcion: ");
+            opcion = scanner.nextInt();
+            scanner.nextLine();
 
-        System.out.println("\n-- Llega un paciente de emergencia --");
-        consultorio.agregar_paciente("Juan Lopez", 80, 5);
+            if (opcion == 1) {
+                System.out.print("Nombre del paciente: ");
+                String nombre = scanner.nextLine();
+                System.out.print("Edad: ");
+                int edad = scanner.nextInt();
+                System.out.print("Nivel de urgencia (1 al 5): ");
+                int nivel_urgencia = scanner.nextInt();
+                scanner.nextLine();
+                consultorio.agregar_paciente(nombre, edad, nivel_urgencia);
 
-        System.out.println();
-        consultorio.mostrar_fila();
+            } else if (opcion == 2) {
+                consultorio.mostrar_fila();
 
-        System.out.println("\n-- Llega otra emergencia --");
-        consultorio.agregar_paciente("Sofia Diaz", 67, 5);
+            } else if (opcion == 3) {
+                consultorio.paciente_mayor_edad();
 
-        System.out.println();
-        consultorio.mostrar_fila();
+            } else if (opcion == 4) {
+                System.out.println("Cerrando el consultorio.");
 
-        System.out.println("\n-- Buscando el paciente de mayor edad desde la cola --");
-        consultorio.paciente_mayor_edad();
+            } else {
+                System.out.println("Opcion no valida, intenta de nuevo.");
+            }
+        }
+
+        scanner.close();
     }
 }
