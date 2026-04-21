@@ -1,4 +1,4 @@
-// Ejercicio 2 — Historial de Comandos de Terminal
+
 public class Comando {
     String texto;
     boolean exitoso;

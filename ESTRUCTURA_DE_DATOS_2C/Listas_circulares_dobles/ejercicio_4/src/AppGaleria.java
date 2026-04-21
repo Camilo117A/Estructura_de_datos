@@ -8,7 +8,7 @@ public class AppGaleria {
         int opcion;
         do {
             System.out.println("\n==============================================");
-            System.out.println("   Ejercicio 4 — Galería de Fotos");
+            System.out.println("        Galería de Fotos");
             System.out.println("==============================================");
             System.out.println("1. Agregar foto");
             System.out.println("2. Foto siguiente →");
@@ -81,10 +81,6 @@ public class AppGaleria {
 
                     System.out.println("\n--- Estado final de la galería ---");
                     galeria.mostrarGaleria();
-                    break;
-
-                case 0:
-                    System.out.println("¡Hasta luego!");
                     break;
 
                 default:

@@ -37,7 +37,7 @@ public class EditorCapas {
             return;
         }
         capaActiva = capaActiva.siguiente;
-        System.out.println("  [↑ Subir] Capa activa: " + capaActiva.nombre);
+        System.out.println("  [Subir] Capa activa: " + capaActiva.nombre);
     }
 
     public void bajarCapa() {
@@ -46,7 +46,7 @@ public class EditorCapas {
             return;
         }
         capaActiva = capaActiva.anterior;
-        System.out.println("  [↓ Bajar] Capa activa: " + capaActiva.nombre);
+        System.out.println("  [Bajar] Capa activa: " + capaActiva.nombre);
     }
 
     public void toggleVisibilidad() {
@@ -93,7 +93,7 @@ public class EditorCapas {
         Capa actual = cabeza;
         int numero = 1;
         do {
-            String activa  = (actual == capaActiva) ? " [✓] ACTIVA" : "      ";
+            String activa  = (actual == capaActiva) ? " ACTIVA" : "      ";
             String visib   = actual.visible ? "[VIS]" : "[OC] ";
             System.out.println("  " + numero + ". " + visib + " \"" + actual.nombre + "\"" + "  Tipo: " + actual.tipo + activa);
             actual = actual.siguiente;

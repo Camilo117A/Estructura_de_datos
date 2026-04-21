@@ -37,7 +37,7 @@ public class Galeria {
             return;
         }
         actual = actual.siguiente;
-        System.out.println("  [→ Siguiente] Viendo: \"" + actual.titulo + "\"");
+        System.out.println("  [Siguiente] Viendo: \"" + actual.titulo + "\"");
     }
 
     public void anterior() {
@@ -46,7 +46,7 @@ public class Galeria {
             return;
         }
         actual = actual.anterior;
-        System.out.println("  [← Anterior] Viendo: \"" + actual.titulo + "\"");
+        System.out.println("  [Anterior] Viendo: \"" + actual.titulo + "\"");
     }
 
     public void toggleFavorita() {
@@ -55,7 +55,7 @@ public class Galeria {
             return;
         }
         actual.esFavorita = !actual.esFavorita;
-        System.out.println("  [★ Favorita] \"" + actual.titulo + "\" → "
+        System.out.println("  [Favorita] \"" + actual.titulo + "\" → "
                 + (actual.esFavorita ? "marcada como FAVORITA" : "quitada de favoritas"));
     }
 

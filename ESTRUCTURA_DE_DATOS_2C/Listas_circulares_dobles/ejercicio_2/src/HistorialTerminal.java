@@ -38,7 +38,7 @@ public class HistorialTerminal {
             return;
         }
         cursor = cursor.anterior;
-        System.out.println("  [↑ Arriba] Comando actual: " + cursor.texto);
+        System.out.println("  [Arriba] Comando actual: " + cursor.texto);
     }
 
     public void abajo() {

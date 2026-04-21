@@ -8,7 +8,7 @@ public class AppEditor {
         int opcion;
         do {
             System.out.println("\n==============================================");
-            System.out.println("   Ejercicio 3 — Editor de Capas");
+            System.out.println("        Editor de Capas");
             System.out.println("==============================================");
             System.out.println("1. Agregar capa");
             System.out.println("2. Subir capa (siguiente)");
@@ -80,10 +80,6 @@ public class AppEditor {
 
                     System.out.println("\n--- Estado final del editor ---");
                     editor.mostrarCapas();
-                    break;
-
-                case 0:
-                    System.out.println("¡Hasta luego!");
                     break;
 
                 default:

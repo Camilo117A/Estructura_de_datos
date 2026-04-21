@@ -8,7 +8,7 @@ public class AppHistorial {
         int opcion;
         do {
             System.out.println("\n==============================================");
-            System.out.println("   Ejercicio 2 — Historial de Terminal");
+            System.out.println("        Historial de Terminal");
             System.out.println("==============================================");
             System.out.println("1. Agregar comando");
             System.out.println("2. Flecha arriba (comando anterior)");
@@ -60,8 +60,8 @@ public class AppHistorial {
                     historial.agregar("ls -la",         true,  "/home/user");
                     historial.agregar("cd proyectos",   true,  "/home/user");
                     historial.agregar("git status",     true,  "/home/user/proyectos");
-                    historial.agregar("sudo rm -rf /",  false, "/home/user");
-                    historial.agregar("javac App.java", true,  "/home/user/proyectos");
+                    historial.agregar("sudo",  false, "/home/user");
+                    historial.agregar("App.java", true,  "/home/user/proyectos");
 
                     System.out.println("5 comandos cargados. Cursor en el más reciente.");
                     historial.mostrarHistorial();
@@ -79,10 +79,6 @@ public class AppHistorial {
 
                     System.out.println("\n--- Estado final del historial ---");
                     historial.mostrarHistorial();
-                    break;
-
-                case 0:
-                    System.out.println("¡Hasta luego!");
                     break;
 
                 default:
