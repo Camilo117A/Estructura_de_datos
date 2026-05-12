@@ -3,13 +3,13 @@
 //  La clave: siempre actualizar AMBOS punteros al modificar
 // ============================================================
 
-public class ListaDoble {
+public class ListaDoble_Patrones {
 
     NodoDoble cabeza;    // primer nodo
     NodoDoble cola;      // último nodo
     NodoDoble actual;    // cursor de navegación (para galería, reproductor, etc.)
 
-    public ListaDoble() {
+    public ListaDoble_Patrones() {
         this.cabeza  = null;
         this.cola    = null;
         this.actual  = null;

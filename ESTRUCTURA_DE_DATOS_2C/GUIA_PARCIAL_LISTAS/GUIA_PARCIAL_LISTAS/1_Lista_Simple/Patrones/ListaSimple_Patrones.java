@@ -3,12 +3,12 @@
 //  Cada método tiene comentarios explicando qué hace cada línea
 // ============================================================
 
-public class ListaSimple {
+public class ListaSimple_Patrones {
 
     Nodo cabeza;   // primer nodo de la lista
     Nodo cola;     // último nodo (no siempre se usa, depende del ejercicio)
 
-    public ListaSimple() {
+    public ListaSimple_Patrones() {
         this.cabeza = null;  // siempre empieza vacía
         this.cola   = null;
     }

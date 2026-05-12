@@ -3,14 +3,14 @@
 //  Regla de oro: siempre hay nodo siguiente y anterior — NUNCA null
 // ============================================================
 
-public class ListaCircularDoble {
+public class ListaCircularDoble_Patrones {
 
     NodoCircularDoble cabeza;
     NodoCircularDoble cola;
     NodoCircularDoble actual;   // cursor de navegación
     int cantidad;
 
-    public ListaCircularDoble() {
+    public ListaCircularDoble_Patrones() {
         this.cabeza   = null;
         this.cola     = null;
         this.actual   = null;
